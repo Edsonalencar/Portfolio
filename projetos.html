@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-i18n-title="doc.title.projects" data-i18n-desc="doc.desc.projects">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projetos — Edson Alencar</title>
+<meta name="description" content="Case studies: SolarZ Pay, Mind Safe, FinCat e LAIS. Problema, solução e resultado." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="shared.css" />
+</head>
+<body data-screen-label="02 Projetos">
+<div class="bg-grid"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>edson.alencar</span>
+      <span class="brand-dot" data-i18n-attr="title:nav.avail" title="Disponível"></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.work">trabalho</a>
+      <a href="projetos.html" data-i18n="nav.projects">projetos</a>
+      <a href="sobre.html" data-i18n="nav.about">sobre</a>
+      <a href="index.html#contato" class="always" data-i18n="nav.contact">contato</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <span data-lang="pt">PT</span>
+        <span data-lang="en">EN</span>
+      </div>
+      <a class="icon-btn" href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.56-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.55c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94V21h-4V9z"/></svg>
+      </a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-i18n="p.eyebrow">projetos · 04 cases</span>
+      <h1 data-i18n-html="p.title">Sistemas em<br/>produção real.</h1>
+      <p data-i18n="p.intro">
+        Quatro case studies — fintech, healthtech, projeto pessoal e saúde pública.
+        Cada um com problema, solução técnica e resultado mensurável.
+        Clique para expandir.
+      </p>
+      <div style="margin-top:36px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="badge">java · spring boot</span>
+        <span class="badge">postgres · redis</span>
+        <span class="badge">docker · github actions</span>
+        <span class="badge">clean arch · ddd</span>
+        <span class="badge">llms · spring ai</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <div class="container" style="padding-top:48px;padding-bottom:96px">
+
+    <!-- 01 SolarZ Pay -->
+    <details class="case reveal" id="solarz" open>
+      <summary class="case-summary">
+        <div class="case-num">01 / 04</div>
+        <div class="case-title">
+          SolarZ Pay
+          <span class="sub" data-i18n="p.solarz.sub">// fintech · cobranças e assinaturas · 2023→</span>
+        </div>
+        <div class="case-toggle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </summary>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="badge" data-i18n="p.solarz.tag1">backend developer</span>
+          <span class="badge" data-i18n="p.solarz.tag2">java + spring boot</span>
+          <span class="badge" data-i18n="p.solarz.tag3">postgresql</span>
+          <span class="badge" data-i18n="p.solarz.tag4">design patterns</span>
+          <span class="badge" data-i18n="p.solarz.tag5">clean architecture</span>
+          <span class="badge" data-i18n="p.solarz.tag6">next.js</span>
+        </div>
+
+        <div class="case-impact">
+          <div class="impact"><div class="k" data-i18n="p.solarz.imp1.k">// mrr da plataforma</div><div class="v accent">R$ 2M</div></div>
+          <div class="impact"><div class="k" data-i18n="p.solarz.imp2.k">// assinaturas ativas</div><div class="v">11.381</div></div>
+          <div class="impact"><div class="k" data-i18n="p.solarz.imp3.k">// clientes empresariais</div><div class="v">271</div></div>
+          <div class="impact"><div class="k" data-i18n="p.solarz.imp4.k">// gateways integrados</div><div class="v">2x</div></div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.problem">problema</div>
+            <h4 data-i18n="p.solarz.problem.h">Acoplamento com gateway único.</h4>
+            <p data-i18n="p.solarz.problem.p">O SolarZ Pay — plataforma B2B de cobranças e assinaturas em crescimento — operava com forte dependência de um único provedor de pagamento. Trocar de gateway exigiria mexer no core financeiro, com risco operacional e comercial.</p>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.solution">solução</div>
+            <h4 data-i18n="p.solarz.solution.h">Camada de integração agnóstica.</h4>
+            <p data-i18n="p.solarz.solution.p">No time de engenharia, sob revisão contínua do tech lead, implementei uma camada de abstração aplicando Design Patterns:</p>
+            <ul>
+              <li data-i18n="p.solarz.solution.l1">Interface única de cobrança consumida pelo domínio</li>
+              <li data-i18n="p.solarz.solution.l2">Implementações isoladas para ASAAS e IUGU (Strategy + Adapter)</li>
+              <li data-i18n="p.solarz.solution.l3">Clean Architecture + SOLID para isolar regras de domínio</li>
+              <li data-i18n="p.solarz.solution.l4">Dashboards Next.js para operação dos clientes B2B</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.result">resultado</div>
+            <h4 data-i18n="p.solarz.result.h">Alternância de provedor sem tocar no core.</h4>
+            <p data-i18n-html="p.solarz.result.p">A plataforma transaciona <strong>R$ 2M de MRR</strong> em 271 clientes empresariais com infraestrutura desacoplada. Alternar provedor passou a ser decisão de produto, não projeto de engenharia.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 02 Mind Safe -->
+    <details class="case reveal" id="mindsafe">
+      <summary class="case-summary">
+        <div class="case-num">02 / 04</div>
+        <div class="case-title">
+          Mind Safe
+          <span class="sub" data-i18n="p.mind.sub">// healthtech · saas para psicólogos · 2022→</span>
+        </div>
+        <div class="case-toggle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </summary>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="badge" data-i18n="p.mind.tag1">co-fundador técnico</span>
+          <span class="badge" data-i18n="p.mind.tag2">java / kotlin</span>
+          <span class="badge" data-i18n="p.mind.tag3">spring boot</span>
+          <span class="badge" data-i18n="p.mind.tag4">keycloak + oauth2</span>
+          <span class="badge" data-i18n="p.mind.tag5">whatsapp api · llms</span>
+          <span class="badge" data-i18n="p.mind.tag6">lgpd</span>
+        </div>
+
+        <div class="case-impact">
+          <div class="impact"><div class="k" data-i18n="p.mind.imp1.k">// psicólogos ativos</div><div class="v accent">164</div></div>
+          <div class="impact"><div class="k" data-i18n="p.mind.imp2.k">// anos em produção</div><div class="v">3+</div></div>
+          <div class="impact"><div class="k" data-i18n="p.mind.imp3.k">// papel</div><div class="v" data-i18n="p.mind.imp3.v">Tech co-founder</div></div>
+          <div class="impact"><div class="k" data-i18n="p.mind.imp4.k">// devops dedicado</div><div class="v" data-i18n="p.mind.imp4.v">0</div></div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.problem">problema</div>
+            <h4 data-i18n="p.mind.problem.h">Clínicas dispersas em planilhas.</h4>
+            <p data-i18n="p.mind.problem.p">Psicólogos autônomos gerenciavam atendimentos, prontuários e cobranças em ferramentas fragmentadas (planilha, Google Agenda, WhatsApp solto), sem conformidade adequada com LGPD para dados sensíveis de saúde.</p>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.solution">solução</div>
+            <h4 data-i18n="p.mind.solution.h">SaaS de gestão de clínica + IA.</h4>
+            <p data-i18n="p.mind.solution.p">Como co-fundador técnico, defini stack, padrões de design e modelagem de domínio:</p>
+            <ul>
+              <li data-i18n="p.mind.solution.l1">Backend Spring Boot: agendamento, prontuário, billing</li>
+              <li data-i18n="p.mind.solution.l2">DDD aplicado nos módulos de prontuário e agendamento</li>
+              <li data-i18n="p.mind.solution.l3">Autenticação Spring Security + OAuth2 + Keycloak</li>
+              <li data-i18n="p.mind.solution.l4">Automação WhatsApp com LLMs p/ relacionamento</li>
+              <li data-i18n="p.mind.solution.l5">Pipeline CI/CD em VPS + Docker Hub + GitHub Actions</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.result">resultado</div>
+            <h4 data-i18n="p.mind.result.h">3+ anos no ar, sem DevOps dedicado.</h4>
+            <p data-i18n-html="p.mind.result.p">Plataforma em operação contínua há mais de 3 anos, atendendo <strong>164 psicólogos ativos</strong>. Stack mantida por mim como co-fundador técnico — produto, infraestrutura e conformidade LGPD sem precisar de especialista DevOps no estágio inicial.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 03 FinCat -->
+    <details class="case reveal" id="fincat">
+      <summary class="case-summary">
+        <div class="case-num">03 / 04</div>
+        <div class="case-title">
+          FinCat
+          <span class="sub" data-i18n="p.fincat.sub">// projeto pessoal · ia aplicada · 2025→</span>
+        </div>
+        <div class="case-toggle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </summary>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="badge" data-i18n="p.fincat.tag1">estudo pessoal</span>
+          <span class="badge" data-i18n="p.fincat.tag2">spring boot + llms</span>
+          <span class="badge" data-i18n="p.fincat.tag3">whatsapp api</span>
+          <span class="badge" data-i18n="p.fincat.tag4">react + typescript</span>
+          <span class="badge" data-i18n="p.fincat.tag5">vps + docker</span>
+        </div>
+
+        <div class="case-impact">
+          <div class="impact"><div class="k" data-i18n="p.fincat.imp1.k">// natureza</div><div class="v accent" data-i18n="p.fincat.imp1.v">Projeto pessoal</div></div>
+          <div class="impact"><div class="k" data-i18n="p.fincat.imp2.k">// canal</div><div class="v" data-i18n="p.fincat.imp2.v">WhatsApp</div></div>
+          <div class="impact"><div class="k" data-i18n="p.fincat.imp3.k">// extração</div><div class="v" data-i18n="p.fincat.imp3.v">LLM</div></div>
+          <div class="impact"><div class="k" data-i18n="p.fincat.imp4.k">// infra</div><div class="v" data-i18n="p.fincat.imp4.v">VPS + CI/CD</div></div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.problem">problema</div>
+            <h4 data-i18n="p.fincat.problem.h">IA generativa no ecossistema Spring.</h4>
+            <p data-i18n="p.fincat.problem.p">Queria explorar na prática como integrar LLMs a fluxos de domínio em Spring Boot — saindo do nível de demo para algo com pipeline real, mantido em produção.</p>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.solution">solução</div>
+            <h4 data-i18n="p.fincat.solution.h">Motor de extração via WhatsApp.</h4>
+            <p data-i18n="p.fincat.solution.p">Projeto pessoal onde o usuário registra fluxos financeiros em linguagem natural via WhatsApp, e a IA estrutura o dado:</p>
+            <ul>
+              <li data-i18n="p.fincat.solution.l1">Motor de extração com LLM em Spring Boot</li>
+              <li data-i18n="p.fincat.solution.l2">Identifica valor, categoria e forma de pagamento</li>
+              <li data-i18n="p.fincat.solution.l3">Converte dados não-estruturados em registros organizados</li>
+              <li data-i18n="p.fincat.solution.l4">Clean Architecture + SOLID no backend</li>
+              <li data-i18n="p.fincat.solution.l5">CI/CD próprio em VPS — baixo custo operacional</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.result">resultado</div>
+            <h4 data-i18n="p.fincat.result.h">Aprendizado em produção, não em demo.</h4>
+            <p data-i18n-html="p.fincat.result.p">FinCat virou laboratório vivo de IA aplicada — <strong>LLMs integrados a fluxo de domínio real</strong>, pipeline próprio, deploy contínuo. O que aprendo aqui carrego para os outros sistemas.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 04 LAIS -->
+    <details class="case reveal" id="lais">
+      <summary class="case-summary">
+        <div class="case-num">04 / 04</div>
+        <div class="case-title">
+          LAIS / UFRN
+          <span class="sub" data-i18n="p.lais.sub">// saúde pública · front-end · 2022–2024</span>
+        </div>
+        <div class="case-toggle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </summary>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="badge" data-i18n="p.lais.tag1">front-end</span>
+          <span class="badge" data-i18n="p.lais.tag2">react · vue</span>
+          <span class="badge" data-i18n="p.lais.tag3">typescript</span>
+          <span class="badge" data-i18n="p.lais.tag4">gitlab + scrum</span>
+          <span class="badge" data-i18n="p.lais.tag5">stakeholders públicos</span>
+        </div>
+
+        <div class="case-impact">
+          <div class="impact"><div class="k" data-i18n="p.lais.imp1.k">// estados atendidos</div><div class="v accent" data-i18n="p.lais.imp1.v">RN · ES</div></div>
+          <div class="impact"><div class="k" data-i18n="p.lais.imp2.k">// módulo principal</div><div class="v" data-i18n="p.lais.imp2.v">Farmácia</div></div>
+          <div class="impact"><div class="k" data-i18n="p.lais.imp3.k">// papel</div><div class="v" data-i18n="p.lais.imp3.v">Front-end dev</div></div>
+          <div class="impact"><div class="k" data-i18n="p.lais.imp4.k">// duração</div><div class="v" data-i18n="p.lais.imp4.v">~2 anos</div></div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.problem">problema</div>
+            <h4 data-i18n="p.lais.problem.h">Saúde pública precisa de UX.</h4>
+            <p data-i18n="p.lais.problem.p">Profissionais de saúde nos estados de RN e ES operavam sistemas governamentais densos, com alta carga cognitiva, em alta demanda (campanhas de vacinação, gestão hospitalar).</p>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.solution">solução</div>
+            <h4 data-i18n="p.lais.solution.h">Front-end no Módulo Farmácia.</h4>
+            <p data-i18n="p.lais.solution.p">Desenvolvimento front-end do Módulo Farmácia (Gestão Hospitalar):</p>
+            <ul>
+              <li data-i18n="p.lais.solution.l1">Arquitetura React/Vue para fluxos complexos de inventário</li>
+              <li data-i18n="p.lais.solution.l2">Otimização da interface de vacinação</li>
+              <li data-i18n="p.lais.solution.l3">Foco em redução de carga cognitiva</li>
+              <li data-i18n="p.lais.solution.l4">Refinamento técnico com stakeholders governamentais</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <div class="head" data-i18n="p.head.result">resultado</div>
+            <h4 data-i18n="p.lais.result.h">Impacto em escala pública.</h4>
+            <p data-i18n-html="p.lais.result.p">Interface usada por profissionais de saúde de <strong>dois estados brasileiros</strong> em fluxos críticos de vacinação e gestão hospitalar. Aprendizado sobre código escalável em equipes multidisciplinares e Scrum aplicado a software de governo.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- ============ CTA ============ -->
+  <section style="padding:96px 0">
+    <div class="container">
+      <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto">
+        <span class="eyebrow" style="justify-content:center" data-i18n="p.cta.eyebrow">próximo case</span>
+        <h2 style="margin-top:18px" data-i18n="p.cta.title">poderia ser o seu.</h2>
+        <p style="margin-top:18px;font-size:16px" data-i18n="p.cta.body">
+          Backend crítico, arquitetura desacoplada, integração com IA ou MVP indie. Vamos conversar.
+        </p>
+        <div class="hero-ctas" style="justify-content:center;margin-top:32px">
+          <a class="btn btn-accent" href="mailto:edson.cesar.alencar@gmail.com">
+            <span data-i18n="p.cta.contact">entrar em contato</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn" href="sobre.html" data-i18n="p.cta.about">conhecer minha história</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-block">
+      <div class="head">// edson.alencar</div>
+      <h3 style="font-weight:500;letter-spacing:-0.02em" data-i18n="footer.tagline">Backend Developer — fintech &amp; healthtech.</h3>
+      <p style="font-size:13.5px;margin-top:16px;max-width:340px" data-i18n="footer.location">
+        Mossoró/RN — Brasil. Trabalhando remoto para SolarZ.
+        Construindo Mind Safe e estudando IA com FinCat.
+      </p>
+      <div style="margin-top:24px"><span class="badge"><span class="dot"></span><span data-i18n="footer.available">aceitando conversas · 2026</span></span></div>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.nav">// navegar</div>
+      <ul>
+        <li><a href="index.html" data-i18n="footer.home">→ home</a></li>
+        <li><a href="projetos.html" data-i18n="footer.projects">→ projetos</a></li>
+        <li><a href="sobre.html" data-i18n="footer.about">→ sobre</a></li>
+        <li><a href="#" data-i18n="footer.writing">→ escrita</a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.social">// social</div>
+      <ul>
+        <li><a href="https://github.com" target="_blank" rel="noopener">→ github <span class="ext">↗</span></a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">→ linkedin <span class="ext">↗</span></a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">→ x/twitter <span class="ext">↗</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.contact">// contato direto</div>
+      <ul>
+        <li><a href="mailto:edson.cesar.alencar@gmail.com" data-i18n="footer.email">→ e-mail</a></li>
+        <li><a href="https://wa.me/5584999398021" data-i18n="footer.wpp">→ whatsapp</a></li>
+        <li><a href="assets/curriculo.pdf" download="Curriculo Edson Alencar - Backend Pleno" data-i18n="footer.cv">→ currículo.pdf</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div data-i18n="footer.copy">© 2026 edson alencar · construído com html, css e café.</div>
+    <div><span data-i18n="footer.deploy">last deploy:</span> <span style="color:var(--accent)">●</span> 15.may.2026</div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="shared.js"></script>
+</body>
+</html>

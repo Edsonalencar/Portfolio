@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-i18n-title="doc.title.banner" data-i18n-desc="doc.desc.banner">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Banner LinkedIn — Edson Alencar</title>
+<meta name="description" content="Banners para LinkedIn — 1584×396 px, prontos para download." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="shared.css" />
+<script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<style>
+  /* ---------- Page layout ---------- */
+  .banner-page { padding: 56px 0 96px; }
+  .banner-intro { max-width: 720px; margin-bottom: 40px; }
+
+  /* ---------- Banner card wrapper ---------- */
+  .banner-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-elev);
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .banner-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .banner-card-head .meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--fg-dim);
+  }
+  .banner-card-head .meta .name { color: var(--fg); }
+  .banner-card-head .meta .size { color: var(--accent); }
+
+  .banner-stage {
+    position: relative;
+    background:
+      repeating-linear-gradient(45deg, var(--bg) 0 6px, transparent 6px 14px),
+      var(--bg-elev-2);
+    padding: 24px;
+    overflow: hidden;
+  }
+  .banner-stage-inner {
+    width: 100%;
+    aspect-ratio: 1584/396;
+    position: relative;
+  }
+  /* The actual banner element is 1584x396 absolute size, scaled via transform */
+  .banner {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1584px;
+    height: 396px;
+    transform-origin: top left;
+    background: var(--bg);
+    overflow: hidden;
+    color: var(--fg);
+    font-family: var(--font-sans);
+  }
+  /* LinkedIn safe-area indicator (avatar covers bottom-left ~270px circle) */
+  .safe-area {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 280px;
+    height: 280px;
+    border: 2px dashed color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 50;
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    display: none;
+  }
+  .safe-area::after {
+    content: "avatar do linkedin / linkedin avatar";
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: color-mix(in srgb, var(--accent) 75%, transparent);
+    white-space: nowrap;
+  }
+  .banner-stage.show-safe .safe-area { display: block; }
+
+  /* Download/options bar */
+  .banner-card-foot {
+    padding: 14px 22px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: var(--bg);
+  }
+  .banner-card-foot .opts {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    border-radius: 6px;
+    color: var(--fg-muted);
+    cursor: pointer;
+    transition: all 140ms ease;
+  }
+  .toggle-btn:hover { color: var(--fg); border-color: var(--border-strong); }
+  .toggle-btn[aria-pressed="true"] {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    background: var(--accent-soft);
+  }
+
+  /* ==========================================================
+     BANNER VARIATIONS — each 1584×396
+     ========================================================== */
+
+  /* Shared inside-banner type scale (raw pixels — NOT responsive) */
+  .banner .b-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 88px 88px;
+    background-position: -1px -1px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 70% 80% at 100% 50%, black 30%, transparent 85%);
+  }
+  .banner .b-corner {
+    position: absolute;
+    inset: 18px;
+    border: 1px solid color-mix(in srgb, var(--border-strong) 80%, transparent);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .banner .b-meta-top {
+    position: absolute;
+    top: 28px; left: 36px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--fg-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .banner .b-meta-top .dot {
+    width: 8px; height: 8px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  .banner .b-meta-right {
+    position: absolute;
+    top: 28px; right: 36px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--fg-dim);
+    text-align: right;
+  }
+  .banner .b-meta-right b { color: var(--fg); font-weight: 500; }
+  .banner .b-foot {
+    position: absolute;
+    bottom: 28px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--fg-dim);
+    display: flex;
+    gap: 22px;
+  }
+  .banner .b-foot.right { right: 36px; }
+  .banner .b-foot.left  { left: 36px; }
+
+  /* ---------- BANNER 01: editorial big statement ---------- */
+  #banner-1 .content {
+    position: absolute;
+    top: 50%; left: 360px;
+    right: 80px;
+    transform: translateY(-50%);
+  }
+  #banner-1 .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--fg-dim);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #banner-1 .eyebrow::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+  }
+  #banner-1 h1 {
+    font-family: var(--font-sans);
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: var(--fg);
+    margin: 0;
+  }
+  #banner-1 h1 .accent { color: var(--accent); }
+  #banner-1 .sub {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--fg-muted);
+    margin-top: 18px;
+    letter-spacing: -0.005em;
+  }
+
+  /* ---------- BANNER 02: terminal / code prompt ---------- */
+  #banner-2 {
+    background: var(--bg);
+  }
+  #banner-2 .term {
+    position: absolute;
+    top: 70px; left: 320px;
+    right: 64px;
+    font-family: var(--font-mono);
+    font-size: 17px;
+    color: var(--fg-muted);
+    line-height: 1.8;
+  }
+  #banner-2 .term .ln { display: block; }
+  #banner-2 .term .prompt { color: var(--accent); margin-right: 10px; }
+  #banner-2 .term .cmd    { color: var(--fg); }
+  #banner-2 .term .key    { color: color-mix(in srgb, var(--accent) 85%, white 15%); }
+  #banner-2 .term .str    { color: #fafafa; }
+  #banner-2 .term .com    { color: var(--fg-dim); }
+  #banner-2 .term .out    { color: var(--fg); }
+  #banner-2 .term .big {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--fg);
+    line-height: 1.1;
+    margin: 14px 0 4px;
+  }
+  #banner-2 .cursor-blink {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--accent);
+    vertical-align: -2px;
+    margin-left: 4px;
+  }
+
+  /* ---------- BANNER 03: stats + manifesto ---------- */
+  #banner-3 .head-block {
+    position: absolute;
+    top: 70px; left: 320px;
+    right: 64px;
+  }
+  #banner-3 .head-block .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--fg-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #banner-3 .head-block .eyebrow::before {
+    content: "";
+    width: 16px;
+    height: 1px;
+    background: var(--accent);
+  }
+  #banner-3 .head-block h1 {
+    font-family: var(--font-sans);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 12px 0 0;
+    color: var(--fg);
+  }
+  #banner-3 .head-block h1 .accent { color: var(--accent); }
+  #banner-3 .stats {
+    position: absolute;
+    bottom: 70px; left: 320px;
+    right: 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  #banner-3 .stat {
+    border-left: 2px solid var(--accent);
+    padding-left: 16px;
+  }
+  #banner-3 .stat .v {
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    line-height: 1;
+  }
+  #banner-3 .stat .v .unit { color: var(--fg-dim); font-size: 18px; margin-left: 2px; }
+  #banner-3 .stat .k {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--fg-muted);
+    margin-top: 8px;
+    line-height: 1.3;
+  }
+
+  /* hide grid bg of body inside banner */
+  .banner .bg-grid { display: none; }
+
+  @media (max-width: 720px) {
+    .banner-stage { padding: 12px; }
+  }
+</style>
+</head>
+<body data-screen-label="04 Banner LinkedIn">
+<div class="bg-grid"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>edson.alencar</span>
+      <span class="brand-dot" data-i18n-attr="title:nav.avail" title="Disponível"></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.work">trabalho</a>
+      <a href="projetos.html" data-i18n="nav.projects">projetos</a>
+      <a href="sobre.html" data-i18n="nav.about">sobre</a>
+      <a href="banner.html" class="always">banner</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <span data-lang="pt">PT</span>
+        <span data-lang="en">EN</span>
+      </div>
+      <a class="icon-btn" href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.56-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.55c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94V21h-4V9z"/></svg>
+      </a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="banner-page">
+    <div class="container">
+
+      <div class="banner-intro reveal">
+        <span class="eyebrow" data-i18n="b.eyebrow">banner · linkedin</span>
+        <h1 style="margin-top:18px;font-size:clamp(36px,5vw,56px)" data-i18n="b.title">Banners prontos para baixar.</h1>
+        <p style="margin-top:18px;font-size:16px" data-i18n-html="b.intro">
+          Três variações no tamanho oficial do LinkedIn (1584×396&nbsp;px). Use o painel <strong style="color:var(--fg)">Tweaks</strong> para mudar a cor de acento, o tema e a fonte — depois clique em <strong style="color:var(--fg)">baixar PNG</strong> no banner que você quiser. A guia "safe area" mostra onde o círculo do avatar cobre.
+        </p>
+      </div>
+
+      <!-- ===== BANNER 01 ===== -->
+      <article class="banner-card reveal">
+        <header class="banner-card-head">
+          <div class="meta">
+            <span class="name" data-i18n="b.1.name">01 — Editorial</span>
+            <span data-i18n="b.1.tag">declaração curta + título</span>
+          </div>
+          <div class="meta">
+            <span class="size">1584 × 396 px</span>
+          </div>
+        </header>
+
+        <div class="banner-stage" data-stage>
+          <div class="banner-stage-inner">
+            <div class="banner" id="banner-1">
+              <div class="b-grid"></div>
+              <div class="b-corner"></div>
+              <div class="b-meta-top">
+                <span class="dot"></span>
+                <span data-i18n="b.top.avail">disponível para conversar</span>
+                <span style="color:var(--border-strong);margin:0 4px">·</span>
+                <span>mossoró/rn — brasil</span>
+              </div>
+              <div class="b-meta-right">
+                <span data-i18n="b.top.role">backend developer</span><br/>
+                <b>java · spring boot</b>
+              </div>
+              <div class="content">
+                <div class="eyebrow" data-i18n="b.1.eyebrow">edson alencar · backend developer</div>
+                <h1 data-i18n-html="b.1.h1">Construo backends<br/>que <span class="accent">sustentam receita</span>.</h1>
+                <div class="sub" data-i18n="b.1.sub">fintech · healthtech · ia aplicada · 4+ anos em produção</div>
+              </div>
+              <div class="b-foot left" data-i18n-html="b.1.foot">
+                <span>// solarz pay</span>
+                <span>// mind safe</span>
+                <span>// fincat</span>
+              </div>
+              <div class="safe-area"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="banner-card-foot">
+          <div class="opts">
+            <button class="toggle-btn" data-toggle-safe data-stage-ref="banner-1" data-i18n="b.toggle.safe">mostrar safe area</button>
+          </div>
+          <div class="opts">
+            <button class="btn" data-download="banner-1" data-filename="banner-edson-editorial.png">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span data-i18n="b.download">baixar PNG</span>
+            </button>
+          </div>
+        </footer>
+      </article>
+
+      <!-- ===== BANNER 02 — terminal ===== -->
+      <article class="banner-card reveal">
+        <header class="banner-card-head">
+          <div class="meta">
+            <span class="name" data-i18n="b.2.name">02 — Terminal</span>
+            <span data-i18n="b.2.tag">linha de comando / dev-first</span>
+          </div>
+          <div class="meta">
+            <span class="size">1584 × 396 px</span>
+          </div>
+        </header>
+
+        <div class="banner-stage" data-stage>
+          <div class="banner-stage-inner">
+            <div class="banner" id="banner-2">
+              <div class="b-grid"></div>
+              <div class="b-corner"></div>
+              <div class="b-meta-top">
+                <span class="dot"></span>
+                <span data-i18n="b.top.avail">disponível para conversar</span>
+              </div>
+              <div class="b-meta-right">
+                <span data-i18n="b.top.cwd">~/work/edson</span><br/>
+                <b>main · ↑</b>
+              </div>
+              <div class="term">
+                <span class="ln"><span class="prompt">$</span><span class="cmd">whoami</span></span>
+                <span class="ln"><span class="big" data-i18n="b.2.bigname">Edson Alencar.</span></span>
+                <span class="ln"><span class="prompt">$</span><span class="cmd">cat role.txt</span></span>
+                <span class="ln" data-i18n-html="b.2.line1"><span class="out">Backend Developer · </span><span class="key">java</span><span class="out"> + </span><span class="key">spring boot</span><span class="out"> · fintech &amp; healthtech</span></span>
+                <span class="ln"><span class="prompt">$</span><span class="cmd">ls projects/</span></span>
+                <span class="ln" data-i18n-html="b.2.line2"><span class="str">solarz-pay</span><span class="out">   </span><span class="str">mind-safe</span><span class="out">   </span><span class="str">fincat</span><span class="com">  <span class="cursor-blink"></span></span></span>
+              </div>
+              <div class="safe-area"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="banner-card-foot">
+          <div class="opts">
+            <button class="toggle-btn" data-toggle-safe data-stage-ref="banner-2" data-i18n="b.toggle.safe">mostrar safe area</button>
+          </div>
+          <div class="opts">
+            <button class="btn" data-download="banner-2" data-filename="banner-edson-terminal.png">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span data-i18n="b.download">baixar PNG</span>
+            </button>
+          </div>
+        </footer>
+      </article>
+
+      <!-- ===== BANNER 03 — stats ===== -->
+      <article class="banner-card reveal">
+        <header class="banner-card-head">
+          <div class="meta">
+            <span class="name" data-i18n="b.3.name">03 — Stats</span>
+            <span data-i18n="b.3.tag">manifesto + números fortes</span>
+          </div>
+          <div class="meta">
+            <span class="size">1584 × 396 px</span>
+          </div>
+        </header>
+
+        <div class="banner-stage" data-stage>
+          <div class="banner-stage-inner">
+            <div class="banner" id="banner-3">
+              <div class="b-grid"></div>
+              <div class="b-corner"></div>
+              <div class="b-meta-top">
+                <span class="dot"></span>
+                <span data-i18n="b.top.avail">disponível para conversar</span>
+              </div>
+              <div class="b-meta-right">
+                <span data-i18n="b.top.role">backend developer</span><br/>
+                <b>java · spring boot</b>
+              </div>
+
+              <div class="head-block">
+                <div class="eyebrow" data-i18n="b.3.eyebrow">edson alencar — backend developer</div>
+                <h1 data-i18n-html="b.3.h1">Engenheiro que constrói negócio.<br/><span class="accent">Arquitetura aplicada em sistemas que vivem.</span></h1>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <div class="v">R$ 2<span class="unit">M</span></div>
+                  <div class="k" data-i18n-html="b.3.s1">// mrr no produto<br/>(solarz pay)</div>
+                </div>
+                <div class="stat">
+                  <div class="v">11.381</div>
+                  <div class="k" data-i18n-html="b.3.s2">// assinaturas ativas<br/>(plataforma b2b)</div>
+                </div>
+                <div class="stat">
+                  <div class="v">164</div>
+                  <div class="k" data-i18n-html="b.3.s3">// psicólogos ativos<br/>(mind safe · 3+ anos)</div>
+                </div>
+                <div class="stat">
+                  <div class="v">4<span class="unit">+</span></div>
+                  <div class="k" data-i18n-html="b.3.s4">// anos de backend java<br/>em produção</div>
+                </div>
+              </div>
+              <div class="safe-area"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="banner-card-foot">
+          <div class="opts">
+            <button class="toggle-btn" data-toggle-safe data-stage-ref="banner-3" data-i18n="b.toggle.safe">mostrar safe area</button>
+          </div>
+          <div class="opts">
+            <button class="btn" data-download="banner-3" data-filename="banner-edson-stats.png">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span data-i18n="b.download">baixar PNG</span>
+            </button>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Tip card -->
+      <div class="diff" style="border:1px dashed var(--border-strong);border-radius:var(--radius);background:transparent;padding:24px 28px;margin-top:24px">
+        <div class="num" style="margin-bottom:8px" data-i18n="b.tip.eyebrow">dica · linkedin</div>
+        <p style="font-size:14px;line-height:1.6" data-i18n-html="b.tip.body">
+          Suba o arquivo em <strong style="color:var(--fg)">Perfil → Editar foto de capa</strong>. Em telas pequenas o LinkedIn corta as bordas e cobre o canto inferior esquerdo com o avatar — o círculo tracejado mostra essa zona. Ative <strong style="color:var(--fg)">mostrar safe area</strong> antes de baixar para conferir.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-block">
+      <div class="head">// edson.alencar</div>
+      <h3 style="font-weight:500;letter-spacing:-0.02em" data-i18n="footer.tagline">Backend Developer — fintech &amp; healthtech.</h3>
+      <p style="font-size:13.5px;margin-top:16px;max-width:340px" data-i18n="footer.location">
+        Mossoró/RN — Brasil. Trabalhando remoto para SolarZ.
+        Construindo Mind Safe e estudando IA com FinCat.
+      </p>
+      <div style="margin-top:24px"><span class="badge"><span class="dot"></span><span data-i18n="footer.available">aceitando conversas · 2026</span></span></div>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.nav">// navegar</div>
+      <ul>
+        <li><a href="index.html" data-i18n="footer.home">→ home</a></li>
+        <li><a href="projetos.html" data-i18n="footer.projects">→ projetos</a></li>
+        <li><a href="sobre.html" data-i18n="footer.about">→ sobre</a></li>
+        <li><a href="banner.html">→ banner</a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.social">// social</div>
+      <ul>
+        <li><a href="https://github.com" target="_blank" rel="noopener">→ github <span class="ext">↗</span></a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">→ linkedin <span class="ext">↗</span></a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener">→ x/twitter <span class="ext">↗</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <div class="head" data-i18n="footer.contact">// contato direto</div>
+      <ul>
+        <li><a href="mailto:edson.cesar.alencar@gmail.com" data-i18n="footer.email">→ e-mail</a></li>
+        <li><a href="https://wa.me/5584999398021" data-i18n="footer.wpp">→ whatsapp</a></li>
+        <li><a href="assets/curriculo.pdf" download="Curriculo Edson Alencar - Backend Pleno" data-i18n="footer.cv">→ currículo.pdf</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div data-i18n="footer.copy">© 2026 edson alencar · construído com html, css e café.</div>
+    <div><span data-i18n="footer.deploy">last deploy:</span> <span style="color:var(--accent)">●</span> 20.may.2026</div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+  /* Banner-page-specific i18n entries (merged into the global dict before shared.js runs applyI18n). */
+  (function () {
+    if (!window.__I18N) return;
+    const ptExtra = {
+      "doc.title.banner": "Banner LinkedIn — Edson Alencar",
+      "doc.desc.banner":  "Banners para LinkedIn — 1584×396 px, prontos para download.",
+
+      "b.eyebrow": "banner · linkedin",
+      "b.title":   "Banners prontos para baixar.",
+      "b.intro":   "Três variações no tamanho oficial do LinkedIn (1584×396&nbsp;px). Use o painel <strong style=\"color:var(--fg)\">Tweaks</strong> para mudar a cor de acento, o tema e a fonte — depois clique em <strong style=\"color:var(--fg)\">baixar PNG</strong> no banner que você quiser. A guia \"safe area\" mostra onde o círculo do avatar cobre.",
+      "b.download": "baixar PNG",
+      "b.toggle.safe": "mostrar safe area",
+
+      "b.top.avail": "disponível para conversar",
+      "b.top.role":  "backend developer",
+      "b.top.cwd":   "~/work/edson",
+
+      "b.1.name":   "01 — Editorial",
+      "b.1.tag":    "declaração curta + título",
+      "b.1.eyebrow":"edson alencar · backend developer",
+      "b.1.h1":     "Construo backends<br/>que <span class=\"accent\">sustentam receita</span>.",
+      "b.1.sub":    "fintech · healthtech · ia aplicada · 4+ anos em produção",
+      "b.1.foot":   "<span>// solarz pay</span><span>// mind safe</span><span>// fincat</span>",
+
+      "b.2.name":    "02 — Terminal",
+      "b.2.tag":     "linha de comando / dev-first",
+      "b.2.bigname": "Edson Alencar.",
+      "b.2.line1":   "<span class=\"out\">Backend Developer · </span><span class=\"key\">java</span><span class=\"out\"> + </span><span class=\"key\">spring boot</span><span class=\"out\"> · fintech &amp; healthtech</span>",
+      "b.2.line2":   "<span class=\"str\">solarz-pay</span><span class=\"out\">   </span><span class=\"str\">mind-safe</span><span class=\"out\">   </span><span class=\"str\">fincat</span><span class=\"com\">  <span class=\"cursor-blink\"></span></span>",
+
+      "b.3.name":   "03 — Stats",
+      "b.3.tag":    "manifesto + números fortes",
+      "b.3.eyebrow":"edson alencar — backend developer",
+      "b.3.h1":     "Engenheiro que constrói negócio.<br/><span class=\"accent\">Arquitetura aplicada em sistemas que vivem.</span>",
+      "b.3.s1":     "// mrr no produto<br/>(solarz pay)",
+      "b.3.s2":     "// assinaturas ativas<br/>(plataforma b2b)",
+      "b.3.s3":     "// psicólogos ativos<br/>(mind safe · 3+ anos)",
+      "b.3.s4":     "// anos de backend java<br/>em produção",
+
+      "b.tip.eyebrow": "dica · linkedin",
+      "b.tip.body":    "Suba o arquivo em <strong style=\"color:var(--fg)\">Perfil → Editar foto de capa</strong>. Em telas pequenas o LinkedIn corta as bordas e cobre o canto inferior esquerdo com o avatar — o círculo tracejado mostra essa zona. Ative <strong style=\"color:var(--fg)\">mostrar safe area</strong> antes de baixar para conferir."
+    };
+    const enExtra = {
+      "doc.title.banner": "LinkedIn Banner — Edson Alencar",
+      "doc.desc.banner":  "Ready-to-download LinkedIn banners — 1584×396 px.",
+
+      "b.eyebrow": "banner · linkedin",
+      "b.title":   "Ready-to-download banners.",
+      "b.intro":   "Three variations at LinkedIn's official size (1584×396&nbsp;px). Use the <strong style=\"color:var(--fg)\">Tweaks</strong> panel to switch accent color, theme and font — then click <strong style=\"color:var(--fg)\">download PNG</strong> on the banner you want. The \"safe area\" guide shows where the avatar circle covers.",
+      "b.download": "download PNG",
+      "b.toggle.safe": "show safe area",
+
+      "b.top.avail": "open to conversations",
+      "b.top.role":  "backend developer",
+      "b.top.cwd":   "~/work/edson",
+
+      "b.1.name":   "01 — Editorial",
+      "b.1.tag":    "short statement + headline",
+      "b.1.eyebrow":"edson alencar · backend developer",
+      "b.1.h1":     "I build backends that<br/><span class=\"accent\">sustain revenue</span>.",
+      "b.1.sub":    "fintech · healthtech · applied ai · 4+ years in production",
+      "b.1.foot":   "<span>// solarz pay</span><span>// mind safe</span><span>// fincat</span>",
+
+      "b.2.name":    "02 — Terminal",
+      "b.2.tag":     "command line / dev-first",
+      "b.2.bigname": "Edson Alencar.",
+      "b.2.line1":   "<span class=\"out\">Backend Developer · </span><span class=\"key\">java</span><span class=\"out\"> + </span><span class=\"key\">spring boot</span><span class=\"out\"> · fintech &amp; healthtech</span>",
+      "b.2.line2":   "<span class=\"str\">solarz-pay</span><span class=\"out\">   </span><span class=\"str\">mind-safe</span><span class=\"out\">   </span><span class=\"str\">fincat</span><span class=\"com\">  <span class=\"cursor-blink\"></span></span>",
+
+      "b.3.name":   "03 — Stats",
+      "b.3.tag":    "manifesto + key numbers",
+      "b.3.eyebrow":"edson alencar — backend developer",
+      "b.3.h1":     "Engineer who builds business.<br/><span class=\"accent\">Architecture applied to systems that live.</span>",
+      "b.3.s1":     "// platform mrr<br/>(solarz pay)",
+      "b.3.s2":     "// active subscriptions<br/>(b2b platform)",
+      "b.3.s3":     "// active psychologists<br/>(mind safe · 3+ years)",
+      "b.3.s4":     "// years of java backend<br/>in production",
+
+      "b.tip.eyebrow": "tip · linkedin",
+      "b.tip.body":    "Upload via <strong style=\"color:var(--fg)\">profileV2 → Edit cover photo</strong>. LinkedIn crops the edges on small screens and the avatar covers the bottom-left — the dashed circle shows that zone. Toggle <strong style=\"color:var(--fg)\">show safe area</strong> before downloading to double-check."
+    };
+    Object.assign(window.__I18N.pt, ptExtra);
+    Object.assign(window.__I18N.en, enExtra);
+  })();
+</script>
+<script src="shared.js"></script>
+<script>
+  /* ===== Banner page interactions ===== */
+  (function () {
+    // Toggle safe-area visualization
+    document.querySelectorAll("[data-toggle-safe]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-stage-ref");
+        const stage = document.querySelector("#" + id).closest(".banner-stage");
+        const on = stage.classList.toggle("show-safe");
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    });
+
+    // Fit banner element (1584px native) into its responsive wrapper via CSS variable
+    function fitBanners() {
+      document.querySelectorAll(".banner-stage-inner").forEach((wrap) => {
+        const w = wrap.clientWidth;
+        const scale = w / 1584;
+        const banner = wrap.querySelector(".banner");
+        if (!banner) return;
+        banner.style.transform = "scale(" + scale + ")";
+      });
+    }
+    fitBanners();
+    window.addEventListener("resize", fitBanners);
+
+    async function renderBannerCanvas(node) {
+      if (window.htmlToImage && typeof window.htmlToImage.toCanvas === "function") {
+        return window.htmlToImage.toCanvas(node, {
+          cacheBust: true,
+          pixelRatio: 2,
+          width: 1584,
+          height: 396,
+          canvasWidth: 3168,
+          canvasHeight: 792,
+          skipAutoScale: true
+        });
+      }
+
+      if (typeof window.html2canvas === "function") {
+        const computedBg = getComputedStyle(node).backgroundColor;
+        return window.html2canvas(node, {
+          width: 1584,
+          height: 396,
+          scale: 2,
+          backgroundColor: computedBg,
+          useCORS: true,
+          foreignObjectRendering: true,
+          logging: false
+        });
+      }
+
+      throw new Error("Nenhuma biblioteca de renderizacao disponivel.");
+    }
+
+    // Download as PNG via html2canvas
+    document.querySelectorAll("[data-download]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const id = btn.getAttribute("data-download");
+        const filename = btn.getAttribute("data-filename") || (id + ".png");
+        const node = document.getElementById(id);
+        if (!node) return;
+
+        const originalText = btn.textContent;
+        const label = btn.querySelector("span");
+        const restore = () => { if (label) label.textContent = originalText.trim(); };
+        if (label) label.textContent = "renderizando…";
+        btn.setAttribute("disabled", "true");
+
+        // Temporarily un-scale to capture at native size, hide safe-area guide
+        const prevTransform = node.style.transform;
+        node.style.transform = "scale(1)";
+        const safe = node.querySelector(".safe-area");
+        const prevDisplay = safe ? safe.style.display : null;
+        if (safe) safe.style.display = "none";
+
+        try {
+          const canvas = await renderBannerCanvas(node);
+          const link = document.createElement("a");
+          link.download = filename;
+          link.href = canvas.toDataURL("image/png");
+          link.click();
+        } catch (err) {
+          console.error(err);
+          alert("Falha ao gerar PNG. Recarregue a pagina e tente novamente.");
+        } finally {
+          node.style.transform = prevTransform;
+          if (safe) safe.style.display = prevDisplay || "";
+          btn.removeAttribute("disabled");
+          if (label) label.textContent = originalText.trim();
+          // re-fit in case
+          setTimeout(() => window.dispatchEvent(new Event("resize")), 50);
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
