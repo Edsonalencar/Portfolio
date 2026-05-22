@@ -1,461 +1,832 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark" data-i18n-title="doc.title.home" data-i18n-desc="doc.desc.home">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Edson Alencar — Backend Developer · Fintech & Healthtech</title>
-<meta name="description" content="Backend Developer em Java/Spring Boot. Time de engenharia do SolarZ Pay, co-fundador técnico da Mind Safe e construindo o FinCat." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="shared.css" />
-</head>
-<body data-screen-label="01 Home">
-<div class="bg-grid"></div>
+<html
+  lang="pt-BR"
+  data-theme="dark"
+  data-i18n-title="doc.title.home"
+  data-i18n-desc="doc.desc.home"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edson Alencar — Backend Developer · Fintech & Healthtech</title>
+    <meta
+      name="description"
+      content="Backend Developer em Java/Spring Boot. Time de engenharia do SolarZ Pay, co-fundador técnico da Mind Safe e construindo o FinCat."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="shared.css" />
+  </head>
+  <body data-screen-label="01 Home">
+    <div class="bg-grid"></div>
 
-<!-- ============ NAV ============ -->
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark"></span>
-      <span>edson.alencar</span>
-      <span class="brand-dot" data-i18n-attr="title:nav.avail" title="Disponível"></span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.work">trabalho</a>
-      <a href="projetos.html" data-i18n="nav.projects">projetos</a>
-      <a href="sobre.html" data-i18n="nav.about">sobre</a>
-      <a href="#contato" class="always" data-i18n="nav.contact">contato</a>
-    </div>
-    <div class="nav-right">
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <span data-lang="pt">PT</span>
-        <span data-lang="en">EN</span>
-      </div>
-      <a class="icon-btn" href="https://github.com/Edsonalencar" aria-label="GitHub" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.56-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z"/></svg>
-      </a>
-      <a class="icon-btn" href="https://www.linkedin.com/in/edson-allencar/" aria-label="LinkedIn" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.55c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94V21h-4V9z"/></svg>
-      </a>
-      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>
-    </div>
-  </div>
-</nav>
-
-<main>
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <span class="badge"><span class="dot"></span><span data-i18n="hero.badge">disponível para conversar</span></span>
-          <h1>Edson&nbsp;Alencar.</h1>
-          <div class="role">
-            <span class="tag" data-i18n="hero.role.tag">backend developer</span>
-            <span data-i18n="hero.role.stack">java · spring boot · postgres</span>
+    <!-- ============ NAV ============ -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span>edson.alencar</span>
+          <span
+            class="brand-dot"
+            data-i18n-attr="title:nav.avail"
+            title="Disponível"
+          ></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" data-i18n="nav.work">trabalho</a>
+          <a href="projetos.html" data-i18n="nav.projects">projetos</a>
+          <a href="sobre.html" data-i18n="nav.about">sobre</a>
+          <a href="#contato" class="always" data-i18n="nav.contact">contato</a>
+        </div>
+        <div class="nav-right">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <span data-lang="pt">PT</span>
+            <span data-lang="en">EN</span>
           </div>
-          <p class="lede" data-i18n-html="hero.lede">
-            Construo <strong>backends</strong> em fintech e healthtech.
-            Time de engenharia do <strong>SolarZ Pay</strong>, co-fundador técnico da <strong>Mind&nbsp;Safe</strong>
-            e mantenho o <strong>FinCat</strong> como estudo de IA aplicada a Spring Boot.
+          <a
+            class="icon-btn"
+            href="https://github.com/Edsonalencar"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.56-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z"
+              />
+            </svg>
+          </a>
+          <a
+            class="icon-btn"
+            href="https://www.linkedin.com/in/edson-allencar/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.55c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94V21h-4V9z"
+              />
+            </svg>
+          </a>
+          <button
+            class="icon-btn"
+            data-theme-toggle
+            aria-label="Toggle theme"
+          ></button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-left">
+              <span class="badge"
+                ><span class="dot"></span
+                ><span data-i18n="hero.badge"
+                  >disponível para conversar</span
+                ></span
+              >
+              <h1>Edson&nbsp;Alencar.</h1>
+              <div class="role">
+                <span class="tag" data-i18n="hero.role.tag"
+                  >backend developer</span
+                >
+                <span data-i18n="hero.role.stack"
+                  >java · spring boot · postgres</span
+                >
+              </div>
+              <p class="lede" data-i18n-html="hero.lede">
+                Construo <strong>backends</strong> em fintech e healthtech. Time
+                de engenharia do <strong>SolarZ Pay</strong>, co-fundador
+                técnico da <strong>Mind&nbsp;Safe</strong> e mantenho o
+                <strong>FinCat</strong> como estudo de IA aplicada a Spring
+                Boot.
+              </p>
+
+              <div class="hero-meta">
+                <div>
+                  <b data-i18n="hero.meta1.value">4 anos</b
+                  ><span data-i18n="hero.meta1.label">backend java</span>
+                </div>
+                <div>
+                  <b data-i18n="hero.meta2.value">R$ 2M</b
+                  ><span data-i18n="hero.meta2.label">mrr no produto</span>
+                </div>
+                <div>
+                  <b data-i18n="hero.meta3.value">164</b
+                  ><span data-i18n="hero.meta3.label">psicólogos ativos</span>
+                </div>
+                <div>
+                  <b data-i18n="hero.meta4.value">3+</b
+                  ><span data-i18n="hero.meta4.label">anos em produção</span>
+                </div>
+              </div>
+
+              <div class="hero-ctas">
+                <a class="btn btn-primary" href="projetos.html">
+                  <span data-i18n="hero.cta.projects">ver projetos</span>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a class="btn" href="#contato">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                  <span data-i18n="hero.cta.contact">entrar em contato</span>
+                </a>
+                <a
+                  class="btn btn-ghost"
+                  href="assets/curriculo.pdf"
+                  download="Curriculo Edson Alencar - Backend Pleno"
+                >
+                  <span data-i18n="hero.cta.cv">currículo.pdf</span>
+                  <span style="color: var(--fg-dim); font-size: 10px">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <div class="hero-portrait reveal">
+                <span
+                  class="hero-portrait-label"
+                  data-i18n="hero.portrait.label"
+                  >edson.cesar.alencar — mossoró/rn</span
+                >
+                <img
+                  class="hero-portrait-image"
+                  src="assets/profileV2.webp"
+                  alt="Retrato de Edson Alencar"
+                  loading="eager"
+                  decoding="async"
+                />
+                <span class="frame-corners"></span>
+                <div class="hero-portrait-meta">
+                  <span># 01 / portrait</span>
+                  <span data-i18n="hero.portrait.meta"
+                    >1.25:1 · placeholder</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STATS STRIP ============ -->
+      <section class="stats-strip" style="padding: 0">
+        <div class="container">
+          <div class="stats-strip-inner">
+            <div class="stat">
+              <div class="k" data-i18n="stats.1.k">// mrr transacionado</div>
+              <div class="v">R$ 2<span class="unit">M</span></div>
+              <div class="sub" data-i18n="stats.1.sub">
+                solarz pay — plataforma b2b
+              </div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="stats.2.k">// assinaturas ativas</div>
+              <div class="v">11.381</div>
+              <div class="sub" data-i18n="stats.2.sub">
+                em 271 clientes empresariais
+              </div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="stats.3.k">// psicólogos ativos</div>
+              <div class="v">164</div>
+              <div class="sub" data-i18n="stats.3.sub">
+                mind safe · 3+ anos no ar
+              </div>
+            </div>
+            <div class="stat">
+              <div class="k" data-i18n="stats.4.k">// anos de backend java</div>
+              <div class="v">4<span class="unit">+</span></div>
+              <div class="sub" data-i18n="stats.4.sub">
+                spring boot em produção
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COMPANIES ============ -->
+      <section style="padding-top: 80px; padding-bottom: 60px">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="left">
+              <span class="eyebrow" data-i18n="companies.eyebrow"
+                >empresas &amp; produtos</span
+              >
+              <h2 data-i18n="companies.title">
+                onde trabalho e o que construí.
+              </h2>
+            </div>
+          </div>
+          <div class="companies reveal">
+            <div class="company">
+              <span class="pill" data-i18n="companies.solarz.pill">atual</span>
+              <div class="logo">SolarZ Pay</div>
+              <div class="meta" data-i18n="companies.solarz.meta">
+                backend dev · 2023→
+              </div>
+            </div>
+            <div class="company">
+              <span class="pill" data-i18n="companies.mind.pill"
+                >co-founder</span
+              >
+              <div class="logo">Mind Safe</div>
+              <div class="meta" data-i18n="companies.mind.meta">
+                co-fundador técnico
+              </div>
+            </div>
+            <div class="company">
+              <span class="pill" data-i18n="companies.fincat.pill">estudo</span>
+              <div class="logo">FinCat</div>
+              <div class="meta" data-i18n="companies.fincat.meta">
+                ia aplicada · projeto pessoal
+              </div>
+            </div>
+            <div class="company">
+              <div class="logo">LAIS / UFRN</div>
+              <div class="meta" data-i18n="companies.lais.meta">
+                front-end · saúde pública
+              </div>
+            </div>
+            <div class="company">
+              <div class="logo">UFERSA</div>
+              <div class="meta" data-i18n="companies.ufersa.meta">
+                prof. voluntário · 2026
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SELECTED WORK ============ -->
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="left">
+              <span class="eyebrow" data-i18n="work.eyebrow"
+                >trabalho selecionado · 2022–presente</span
+              >
+              <h2 data-i18n="work.title">três frentes em paralelo.</h2>
+              <p data-i18n="work.intro">
+                Trabalho de carteira em fintech, produto próprio em healthtech e
+                projeto pessoal de estudo em IA. Cada um tem código rodando em
+                produção real.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="projetos.html">
+              <span data-i18n="work.see_all">todos os case studies</span>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="projects">
+            <!-- FEATURED: SolarZ Pay -->
+            <a class="project-card featured reveal" href="projetos.html#solarz">
+              <div class="row">
+                <div>
+                  <span class="label" data-i18n="work.solarz.label"
+                    >// 01 — solarz pay · fintech</span
+                  >
+                  <h3 data-i18n-html="work.solarz.title">
+                    Camada agnóstica de gateways<br />em plataforma de R$ 2M de
+                    MRR.
+                  </h3>
+                </div>
+                <div class="project-arrow">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </div>
+              </div>
+              <p class="desc" data-i18n="work.solarz.desc">
+                Plataforma B2B de cobranças e assinaturas. Implementei
+                integração desacoplada com ASAAS e IUGU aplicando Design
+                Patterns. Backend em Spring Boot + Clean Architecture, com
+                revisão contínua pelo tech lead da equipe.
+              </p>
+              <div class="kpis">
+                <div>
+                  <b>R$ 2M</b
+                  ><span data-i18n="work.solarz.kpi1.l">mrr da plataforma</span>
+                </div>
+                <div>
+                  <b>11.381</b
+                  ><span data-i18n="work.solarz.kpi2.l"
+                    >assinaturas ativas</span
+                  >
+                </div>
+                <div>
+                  <b>271</b
+                  ><span data-i18n="work.solarz.kpi3.l"
+                    >clientes empresariais</span
+                  >
+                </div>
+                <div>
+                  <b>2x</b
+                  ><span data-i18n="work.solarz.kpi4.l"
+                    >gateways integrados</span
+                  >
+                </div>
+              </div>
+            </a>
+
+            <!-- Mind Safe -->
+            <a class="project-card reveal" href="projetos.html#mindsafe">
+              <div class="row">
+                <div>
+                  <span class="label" data-i18n="work.mind.label"
+                    >// 02 — mind safe · healthtech</span
+                  >
+                  <h3 data-i18n="work.mind.title">
+                    SaaS para psicólogos com 3+ anos de operação.
+                  </h3>
+                </div>
+                <div class="project-arrow">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </div>
+              </div>
+              <p class="desc" data-i18n="work.mind.desc">
+                Co-fundador técnico. Backend crítico de saúde com LGPD,
+                prontuário eletrônico, atendimento online e automação WhatsApp
+                com LLMs.
+              </p>
+              <div class="kpis">
+                <div>
+                  <b>164</b
+                  ><span data-i18n="work.mind.kpi1.l">psicólogos ativos</span>
+                </div>
+                <div>
+                  <b>3+</b
+                  ><span data-i18n="work.mind.kpi2.l">anos em produção</span>
+                </div>
+                <div>
+                  <b data-i18n="work.mind.kpi3.v">tech co-founder</b
+                  ><span data-i18n="work.mind.kpi3.l">papel</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- FinCat -->
+            <a class="project-card reveal" href="projetos.html#fincat">
+              <div class="row">
+                <div>
+                  <span class="label" data-i18n="work.fincat.label"
+                    >// 03 — fincat · projeto pessoal</span
+                  >
+                  <h3 data-i18n="work.fincat.title">
+                    Estudo de IA aplicada ao ecossistema Spring.
+                  </h3>
+                </div>
+                <div class="project-arrow">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </div>
+              </div>
+              <p class="desc" data-i18n="work.fincat.desc">
+                Projeto pessoal explorando LLMs em Spring Boot. Motor de
+                extração converte mensagens informais via WhatsApp em registros
+                financeiros estruturados, integrando IA ao fluxo de domínio.
+              </p>
+              <div class="kpis">
+                <div>
+                  <b data-i18n="work.fincat.kpi1.v">Spring + LLM</b
+                  ><span data-i18n="work.fincat.kpi1.l">stack ia</span>
+                </div>
+                <div>
+                  <b data-i18n="work.fincat.kpi2.v">WhatsApp</b
+                  ><span data-i18n="work.fincat.kpi2.l">canal</span>
+                </div>
+                <div>
+                  <b data-i18n="work.fincat.kpi3.v">estudo / indie</b
+                  ><span data-i18n="work.fincat.kpi3.l">natureza</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DIFFERENTIATORS / MANIFESTO ============ -->
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="left">
+              <span class="eyebrow" data-i18n="diff.eyebrow"
+                >o que eu trago</span
+              >
+              <h2 data-i18n="diff.title">três frentes que se reforçam.</h2>
+              <p data-i18n="diff.intro">
+                Engenheiro que entende negócio porque também opera o próprio.
+                Três pontos que conectam meu trabalho:
+              </p>
+            </div>
+          </div>
+          <div class="diffs reveal">
+            <div class="diff">
+              <div class="num" data-i18n="diff.1.num">01 — fintech real</div>
+              <h3 data-i18n-html="diff.1.head">
+                Backend em fintech B2B de <span class="accent">produção</span>.
+              </h3>
+              <p data-i18n="diff.1.body">
+                Atuo no time de engenharia do SolarZ Pay — plataforma de
+                cobranças com R$ 2M de MRR e 11.381 assinaturas. Implementei a
+                camada agnóstica de gateways aplicando Design Patterns.
+              </p>
+            </div>
+            <div class="diff">
+              <div class="num" data-i18n="diff.2.num">
+                02 — arquitetura aplicada
+              </div>
+              <h3 data-i18n-html="diff.2.head">
+                Clean Architecture, DDD e SOLID
+                <span class="accent">em sistemas que vivem</span>.
+              </h3>
+              <p data-i18n="diff.2.body">
+                Padrões para escalar sem reescrever. Aplicação consistente em
+                SolarZ, Mind Safe e FinCat. Decisões arquiteturais ponta a ponta
+                na minha startup — modelagem de domínio, módulos de prontuário,
+                agendamento.
+              </p>
+            </div>
+            <div class="diff">
+              <div class="num" data-i18n="diff.3.num">
+                03 — devops end-to-end
+              </div>
+              <h3 data-i18n-html="diff.3.head">
+                Pipeline em VPS <span class="accent">sem DevOps dedicado</span>.
+              </h3>
+              <p data-i18n="diff.3.body">
+                Mantenho a Mind Safe há 3+ anos com pipeline próprio em VPS +
+                Docker Hub + GitHub Actions. Entrega contínua viável no estágio
+                inicial, sem dependência de especialista DevOps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STACK ============ -->
+      <section>
+        <div class="container">
+          <div class="stack reveal">
+            <div>
+              <span class="eyebrow" data-i18n="stack.eyebrow">stack</span>
+              <h2 data-i18n="stack.title">tecnologias que uso diariamente.</h2>
+              <p
+                style="margin-top: 18px; font-size: 14px"
+                data-i18n="stack.intro"
+              >
+                Foco em Java/Spring no backend, com bagagem em front-end
+                (React/Next) quando o produto exige.
+              </p>
+            </div>
+            <div class="stack-groups">
+              <div class="stack-group">
+                <div class="head" data-i18n="stack.langs">
+                  // linguagens (uso diário)
+                </div>
+                <div class="stack-items">
+                  <span class="tech primary">Java</span>
+                  <span class="tech primary">TypeScript</span>
+                  <span class="tech">Kotlin</span>
+                  <span class="tech">SQL</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="head" data-i18n="stack.back">
+                  // backend &amp; arquitetura
+                </div>
+                <div class="stack-items">
+                  <span class="tech primary">Spring Boot</span>
+                  <span class="tech">Spring Security</span>
+                  <span class="tech">OAuth2</span>
+                  <span class="tech">Hibernate / JPA</span>
+                  <span class="tech">Flyway</span>
+                  <span class="tech">REST + OpenAPI</span>
+                  <span class="tech">Clean Arch.</span>
+                  <span class="tech">DDD</span>
+                  <span class="tech">SOLID</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="head" data-i18n="stack.devops">
+                  // devops &amp; infra
+                </div>
+                <div class="stack-items">
+                  <span class="tech primary">Docker</span>
+                  <span class="tech primary">GitHub Actions</span>
+                  <span class="tech">CI/CD em VPS</span>
+                  <span class="tech">GCP</span>
+                  <span class="tech">Azure</span>
+                  <span class="tech">S3</span>
+                  <span class="tech">Kubernetes</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <div class="head" data-i18n="stack.data">// dados &amp; ia</div>
+                <div class="stack-items">
+                  <span class="tech primary">PostgreSQL</span>
+                  <span class="tech">MariaDB</span>
+                  <span class="tech">Oracle</span>
+                  <span class="tech">Redis</span>
+                  <span class="tech primary">LLMs · Spring AI</span>
+                  <span class="tech">WhatsApp API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WRITING ============ -->
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="left">
+              <span class="eyebrow" data-i18n="post.eyebrow">escrita</span>
+              <h2 data-i18n="post.title">notas técnicas.</h2>
+              <p data-i18n="post.intro">
+                Escrevo sobre backend Java, arquitetura aplicada e o que aprendi
+                construindo software em produção.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="#" data-i18n="post.see_all"
+              >arquivo completo →</a
+            >
+          </div>
+          <div class="posts reveal">
+            <a class="post" href="#">
+              <div class="date">2026 · 04</div>
+              <div class="title" data-i18n="post.1.title">
+                Por que escolhemos uma camada agnóstica de gateway no SolarZ Pay
+                — e o que aprendi com Design Patterns em produção.
+              </div>
+              <div class="tag" data-i18n="post.1.tag">arquitetura</div>
+              <div class="read">8 min ↗</div>
+            </a>
+            <a class="post" href="#">
+              <div class="date">2026 · 02</div>
+              <div class="title" data-i18n="post.2.title">
+                Spring AI na prática: extraindo estrutura de mensagens informais
+                com LLM para o FinCat.
+              </div>
+              <div class="tag" data-i18n="post.2.tag">ia + spring</div>
+              <div class="read">11 min ↗</div>
+            </a>
+            <a class="post" href="#">
+              <div class="date">2025 · 11</div>
+              <div class="title" data-i18n="post.3.title">
+                Clean Architecture não é overengineering: como 3 anos de Mind
+                Safe provaram.
+              </div>
+              <div class="tag" data-i18n="post.3.tag">opinião</div>
+              <div class="read">6 min ↗</div>
+            </a>
+            <a class="post" href="#">
+              <div class="date">2025 · 08</div>
+              <div class="title" data-i18n="post.4.title">
+                CI/CD em VPS sem DevOps: pipeline com Docker Hub + GitHub
+                Actions que uso há anos.
+              </div>
+              <div class="tag" data-i18n="post.4.tag">devops</div>
+              <div class="read">9 min ↗</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA / CONTACT ============ -->
+      <section id="contato" style="padding: 120px 0">
+        <div class="container">
+          <div
+            class="reveal"
+            style="text-align: center; max-width: 780px; margin: 0 auto"
+          >
+            <span
+              class="eyebrow"
+              style="justify-content: center"
+              data-i18n="cta.eyebrow"
+              >vamos conversar</span
+            >
+            <h2
+              style="margin-top: 18px; font-size: clamp(36px, 5.5vw, 64px)"
+              data-i18n-html="cta.title"
+            >
+              tem um problema técnico difícil<br />em fintech ou healthtech?
+            </h2>
+            <p
+              style="margin-top: 24px; font-size: 17px; line-height: 1.55"
+              data-i18n="cta.body"
+            >
+              Estou aberto a conversar sobre vagas, projetos pontuais e
+              parcerias técnicas. Resposta em até 48h.
+            </p>
+            <div
+              class="hero-ctas"
+              style="justify-content: center; margin-top: 36px"
+            >
+              <a
+                class="btn btn-accent"
+                href="mailto:edson.cesar.alencar@gmail.com"
+              >
+                edson.cesar.alencar@gmail.com
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                class="btn"
+                href="https://wa.me/5584999398021?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.05-.4 0-.5-.05-.15-.7-1.7-1-2.3-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.05 1-1.05 2.5s1.1 3 1.25 3.2c.15.2 2.15 3.3 5.25 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.05-1.45.25-.75.25-1.4.2-1.5-.05-.1-.25-.2-.55-.35z"
+                  />
+                </svg>
+                +55 84 99939-8021
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-block">
+          <div class="head">// edson.alencar</div>
+          <h3
+            style="font-weight: 500; letter-spacing: -0.02em"
+            data-i18n="footer.tagline"
+          >
+            Backend Developer — fintech &amp; healthtech.
+          </h3>
+          <p
+            style="font-size: 13.5px; margin-top: 16px; max-width: 340px"
+            data-i18n="footer.location"
+          >
+            Mossoró/RN — Brasil. Trabalhando remoto para SolarZ. Construindo
+            Mind Safe e estudando IA com FinCat.
           </p>
-
-          <div class="hero-meta">
-            <div><b data-i18n="hero.meta1.value">4 anos</b><span data-i18n="hero.meta1.label">backend java</span></div>
-            <div><b data-i18n="hero.meta2.value">R$ 2M</b><span data-i18n="hero.meta2.label">mrr no produto</span></div>
-            <div><b data-i18n="hero.meta3.value">164</b><span data-i18n="hero.meta3.label">psicólogos ativos</span></div>
-            <div><b data-i18n="hero.meta4.value">3+</b><span data-i18n="hero.meta4.label">anos em produção</span></div>
-          </div>
-
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="projetos.html">
-              <span data-i18n="hero.cta.projects">ver projetos</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <a class="btn" href="#contato">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-              <span data-i18n="hero.cta.contact">entrar em contato</span>
-            </a>
-            <a class="btn btn-ghost" href="assets/curriculo.pdf" download="Curriculo Edson Alencar - Backend Pleno">
-              <span data-i18n="hero.cta.cv">currículo.pdf</span>
-              <span style="color:var(--fg-dim);font-size:10px">↗</span>
-            </a>
+          <div style="margin-top: 24px">
+            <span class="badge"
+              ><span class="dot"></span
+              ><span data-i18n="footer.available"
+                >aceitando conversas · 2026</span
+              ></span
+            >
           </div>
         </div>
-
-        <div class="hero-right">
-          <div class="hero-portrait reveal">
-            <span class="hero-portrait-label" data-i18n="hero.portrait.label">edson.cesar.alencar — mossoró/rn</span>
-            <img
-              class="hero-portrait-image"
-              src="assets/profileV2.webp"
-              alt="Retrato de Edson Alencar"
-              loading="eager"
-              decoding="async"
-            />
-            <span class="frame-corners"></span>
-            <div class="hero-portrait-meta">
-              <span># 01 / portrait</span>
-              <span data-i18n="hero.portrait.meta">1.25:1 · placeholder</span>
-            </div>
-          </div>
+        <div class="footer-block">
+          <div class="head" data-i18n="footer.nav">// navegar</div>
+          <ul>
+            <li><a href="index.html" data-i18n="footer.home">→ home</a></li>
+            <li>
+              <a href="projetos.html" data-i18n="footer.projects">→ projetos</a>
+            </li>
+            <li><a href="sobre.html" data-i18n="footer.about">→ sobre</a></li>
+            <li><a href="#" data-i18n="footer.writing">→ escrita</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <div class="head" data-i18n="footer.social">// social</div>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/Edsonalencar"
+                target="_blank"
+                rel="noopener"
+                >→ github <span class="ext">↗</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/edson-allencar/"
+                target="_blank"
+                rel="noopener"
+                >→ linkedin <span class="ext">↗</span></a
+              >
+            </li>
+            <li>
+              <a href="https://x.com" target="_blank" rel="noopener"
+                >→ x/twitter <span class="ext">↗</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <div class="head" data-i18n="footer.contact">// contato direto</div>
+          <ul>
+            <li>
+              <a
+                href="mailto:edson.cesar.alencar@gmail.com"
+                data-i18n="footer.email"
+                >→ e-mail</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5584999398021?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                data-i18n="footer.wpp"
+                >→ whatsapp</a
+              >
+            </li>
+            <li>
+              <a
+                href="assets/curriculo.pdf"
+                download="Curriculo Edson Alencar - Backend Pleno"
+                data-i18n="footer.cv"
+                >→ currículo.pdf</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ STATS STRIP ============ -->
-  <section class="stats-strip" style="padding:0">
-    <div class="container">
-      <div class="stats-strip-inner">
-        <div class="stat">
-          <div class="k" data-i18n="stats.1.k">// mrr transacionado</div>
-          <div class="v">R$ 2<span class="unit">M</span></div>
-          <div class="sub" data-i18n="stats.1.sub">solarz pay — plataforma b2b</div>
+      <div class="container footer-bottom">
+        <div data-i18n="footer.copy">
+          © 2026 edson alencar · construído com html, css e café.
         </div>
-        <div class="stat">
-          <div class="k" data-i18n="stats.2.k">// assinaturas ativas</div>
-          <div class="v">11.381</div>
-          <div class="sub" data-i18n="stats.2.sub">em 271 clientes empresariais</div>
-        </div>
-        <div class="stat">
-          <div class="k" data-i18n="stats.3.k">// psicólogos ativos</div>
-          <div class="v">164</div>
-          <div class="sub" data-i18n="stats.3.sub">mind safe · 3+ anos no ar</div>
-        </div>
-        <div class="stat">
-          <div class="k" data-i18n="stats.4.k">// anos de backend java</div>
-          <div class="v">4<span class="unit">+</span></div>
-          <div class="sub" data-i18n="stats.4.sub">spring boot em produção</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ COMPANIES ============ -->
-  <section style="padding-top:80px;padding-bottom:60px">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="left">
-          <span class="eyebrow" data-i18n="companies.eyebrow">empresas &amp; produtos</span>
-          <h2 data-i18n="companies.title">onde trabalho e o que construí.</h2>
-        </div>
-      </div>
-      <div class="companies reveal">
-        <div class="company">
-          <span class="pill" data-i18n="companies.solarz.pill">atual</span>
-          <div class="logo">SolarZ Pay</div>
-          <div class="meta" data-i18n="companies.solarz.meta">backend dev · 2023→</div>
-        </div>
-        <div class="company">
-          <span class="pill" data-i18n="companies.mind.pill">co-founder</span>
-          <div class="logo">Mind Safe</div>
-          <div class="meta" data-i18n="companies.mind.meta">co-fundador técnico</div>
-        </div>
-        <div class="company">
-          <span class="pill" data-i18n="companies.fincat.pill">estudo</span>
-          <div class="logo">FinCat</div>
-          <div class="meta" data-i18n="companies.fincat.meta">ia aplicada · projeto pessoal</div>
-        </div>
-        <div class="company">
-          <div class="logo">LAIS / UFRN</div>
-          <div class="meta" data-i18n="companies.lais.meta">front-end · saúde pública</div>
-        </div>
-        <div class="company">
-          <div class="logo">UFERSA</div>
-          <div class="meta" data-i18n="companies.ufersa.meta">prof. voluntário · 2026</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SELECTED WORK ============ -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="left">
-          <span class="eyebrow" data-i18n="work.eyebrow">trabalho selecionado · 2022–presente</span>
-          <h2 data-i18n="work.title">três frentes em paralelo.</h2>
-          <p data-i18n="work.intro">Trabalho de carteira em fintech, produto próprio em healthtech e projeto pessoal de estudo em IA. Cada um tem código rodando em produção real.</p>
-        </div>
-        <a class="btn btn-ghost" href="projetos.html">
-          <span data-i18n="work.see_all">todos os case studies</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-
-      <div class="projects">
-
-        <!-- FEATURED: SolarZ Pay -->
-        <a class="project-card featured reveal" href="projetos.html#solarz">
-          <div class="row">
-            <div>
-              <span class="label" data-i18n="work.solarz.label">// 01 — solarz pay · fintech</span>
-              <h3 data-i18n-html="work.solarz.title">Camada agnóstica de gateways<br/>em plataforma de R$ 2M de MRR.</h3>
-            </div>
-            <div class="project-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </div>
-          </div>
-          <p class="desc" data-i18n="work.solarz.desc">Plataforma B2B de cobranças e assinaturas. Implementei integração desacoplada com ASAAS e IUGU aplicando Design Patterns. Backend em Spring Boot + Clean Architecture, com revisão contínua pelo tech lead da equipe.</p>
-          <div class="kpis">
-            <div><b>R$ 2M</b><span data-i18n="work.solarz.kpi1.l">mrr da plataforma</span></div>
-            <div><b>11.381</b><span data-i18n="work.solarz.kpi2.l">assinaturas ativas</span></div>
-            <div><b>271</b><span data-i18n="work.solarz.kpi3.l">clientes empresariais</span></div>
-            <div><b>2x</b><span data-i18n="work.solarz.kpi4.l">gateways integrados</span></div>
-          </div>
-        </a>
-
-        <!-- Mind Safe -->
-        <a class="project-card reveal" href="projetos.html#mindsafe">
-          <div class="row">
-            <div>
-              <span class="label" data-i18n="work.mind.label">// 02 — mind safe · healthtech</span>
-              <h3 data-i18n="work.mind.title">SaaS para psicólogos com 3+ anos de operação.</h3>
-            </div>
-            <div class="project-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </div>
-          </div>
-          <p class="desc" data-i18n="work.mind.desc">Co-fundador técnico. Backend crítico de saúde com LGPD, prontuário eletrônico, atendimento online e automação WhatsApp com LLMs.</p>
-          <div class="kpis">
-            <div><b>164</b><span data-i18n="work.mind.kpi1.l">psicólogos ativos</span></div>
-            <div><b>3+</b><span data-i18n="work.mind.kpi2.l">anos em produção</span></div>
-            <div><b data-i18n="work.mind.kpi3.v">tech co-founder</b><span data-i18n="work.mind.kpi3.l">papel</span></div>
-          </div>
-        </a>
-
-        <!-- FinCat -->
-        <a class="project-card reveal" href="projetos.html#fincat">
-          <div class="row">
-            <div>
-              <span class="label" data-i18n="work.fincat.label">// 03 — fincat · projeto pessoal</span>
-              <h3 data-i18n="work.fincat.title">Estudo de IA aplicada ao ecossistema Spring.</h3>
-            </div>
-            <div class="project-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </div>
-          </div>
-          <p class="desc" data-i18n="work.fincat.desc">Projeto pessoal explorando LLMs em Spring Boot. Motor de extração converte mensagens informais via WhatsApp em registros financeiros estruturados, integrando IA ao fluxo de domínio.</p>
-          <div class="kpis">
-            <div><b data-i18n="work.fincat.kpi1.v">Spring + LLM</b><span data-i18n="work.fincat.kpi1.l">stack ia</span></div>
-            <div><b data-i18n="work.fincat.kpi2.v">WhatsApp</b><span data-i18n="work.fincat.kpi2.l">canal</span></div>
-            <div><b data-i18n="work.fincat.kpi3.v">estudo / indie</b><span data-i18n="work.fincat.kpi3.l">natureza</span></div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ DIFFERENTIATORS / MANIFESTO ============ -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="left">
-          <span class="eyebrow" data-i18n="diff.eyebrow">o que eu trago</span>
-          <h2 data-i18n="diff.title">três frentes que se reforçam.</h2>
-          <p data-i18n="diff.intro">Engenheiro que entende negócio porque também opera o próprio. Três pontos que conectam meu trabalho:</p>
-        </div>
-      </div>
-      <div class="diffs reveal">
-        <div class="diff">
-          <div class="num" data-i18n="diff.1.num">01 — fintech real</div>
-          <h3 data-i18n-html="diff.1.head">Backend em fintech B2B de <span class="accent">produção</span>.</h3>
-          <p data-i18n="diff.1.body">Atuo no time de engenharia do SolarZ Pay — plataforma de cobranças com R$ 2M de MRR e 11.381 assinaturas. Implementei a camada agnóstica de gateways aplicando Design Patterns.</p>
-        </div>
-        <div class="diff">
-          <div class="num" data-i18n="diff.2.num">02 — arquitetura aplicada</div>
-          <h3 data-i18n-html="diff.2.head">Clean Architecture, DDD e SOLID <span class="accent">em sistemas que vivem</span>.</h3>
-          <p data-i18n="diff.2.body">Padrões para escalar sem reescrever. Aplicação consistente em SolarZ, Mind Safe e FinCat. Decisões arquiteturais ponta a ponta na minha startup — modelagem de domínio, módulos de prontuário, agendamento.</p>
-        </div>
-        <div class="diff">
-          <div class="num" data-i18n="diff.3.num">03 — devops end-to-end</div>
-          <h3 data-i18n-html="diff.3.head">Pipeline em VPS <span class="accent">sem DevOps dedicado</span>.</h3>
-          <p data-i18n="diff.3.body">Mantenho a Mind Safe há 3+ anos com pipeline próprio em VPS + Docker Hub + GitHub Actions. Entrega contínua viável no estágio inicial, sem dependência de especialista DevOps.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ STACK ============ -->
-  <section>
-    <div class="container">
-      <div class="stack reveal">
         <div>
-          <span class="eyebrow" data-i18n="stack.eyebrow">stack</span>
-          <h2 data-i18n="stack.title">tecnologias que uso diariamente.</h2>
-          <p style="margin-top:18px;font-size:14px" data-i18n="stack.intro">
-            Foco em Java/Spring no backend, com bagagem em front-end
-            (React/Next) quando o produto exige.
-          </p>
-        </div>
-        <div class="stack-groups">
-          <div class="stack-group">
-            <div class="head" data-i18n="stack.langs">// linguagens (uso diário)</div>
-            <div class="stack-items">
-              <span class="tech primary">Java</span>
-              <span class="tech primary">TypeScript</span>
-              <span class="tech">Kotlin</span>
-              <span class="tech">SQL</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="head" data-i18n="stack.back">// backend &amp; arquitetura</div>
-            <div class="stack-items">
-              <span class="tech primary">Spring Boot</span>
-              <span class="tech">Spring Security</span>
-              <span class="tech">OAuth2</span>
-              <span class="tech">Hibernate / JPA</span>
-              <span class="tech">Flyway</span>
-              <span class="tech">REST + OpenAPI</span>
-              <span class="tech">Clean Arch.</span>
-              <span class="tech">DDD</span>
-              <span class="tech">SOLID</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="head" data-i18n="stack.devops">// devops &amp; infra</div>
-            <div class="stack-items">
-              <span class="tech primary">Docker</span>
-              <span class="tech primary">GitHub Actions</span>
-              <span class="tech">CI/CD em VPS</span>
-              <span class="tech">GCP</span>
-              <span class="tech">Azure</span>
-              <span class="tech">S3</span>
-              <span class="tech">Kubernetes</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="head" data-i18n="stack.data">// dados &amp; ia</div>
-            <div class="stack-items">
-              <span class="tech primary">PostgreSQL</span>
-              <span class="tech">MariaDB</span>
-              <span class="tech">Oracle</span>
-              <span class="tech">Redis</span>
-              <span class="tech primary">LLMs · Spring AI</span>
-              <span class="tech">WhatsApp API</span>
-            </div>
-          </div>
+          <span data-i18n="footer.deploy">last deploy:</span>
+          <span style="color: var(--accent)">●</span> 15.may.2026
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ============ WRITING ============ -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="left">
-          <span class="eyebrow" data-i18n="post.eyebrow">escrita</span>
-          <h2 data-i18n="post.title">notas técnicas.</h2>
-          <p data-i18n="post.intro">Escrevo sobre backend Java, arquitetura aplicada e o que aprendi construindo software em produção.</p>
-        </div>
-        <a class="btn btn-ghost" href="#" data-i18n="post.see_all">arquivo completo →</a>
-      </div>
-      <div class="posts reveal">
-        <a class="post" href="#">
-          <div class="date">2026 · 04</div>
-          <div class="title" data-i18n="post.1.title">Por que escolhemos uma camada agnóstica de gateway no SolarZ Pay — e o que aprendi com Design Patterns em produção.</div>
-          <div class="tag" data-i18n="post.1.tag">arquitetura</div>
-          <div class="read">8 min ↗</div>
-        </a>
-        <a class="post" href="#">
-          <div class="date">2026 · 02</div>
-          <div class="title" data-i18n="post.2.title">Spring AI na prática: extraindo estrutura de mensagens informais com LLM para o FinCat.</div>
-          <div class="tag" data-i18n="post.2.tag">ia + spring</div>
-          <div class="read">11 min ↗</div>
-        </a>
-        <a class="post" href="#">
-          <div class="date">2025 · 11</div>
-          <div class="title" data-i18n="post.3.title">Clean Architecture não é overengineering: como 3 anos de Mind Safe provaram.</div>
-          <div class="tag" data-i18n="post.3.tag">opinião</div>
-          <div class="read">6 min ↗</div>
-        </a>
-        <a class="post" href="#">
-          <div class="date">2025 · 08</div>
-          <div class="title" data-i18n="post.4.title">CI/CD em VPS sem DevOps: pipeline com Docker Hub + GitHub Actions que uso há anos.</div>
-          <div class="tag" data-i18n="post.4.tag">devops</div>
-          <div class="read">9 min ↗</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CTA / CONTACT ============ -->
-  <section id="contato" style="padding:120px 0">
-    <div class="container">
-      <div class="reveal" style="text-align:center;max-width:780px;margin:0 auto">
-        <span class="eyebrow" style="justify-content:center" data-i18n="cta.eyebrow">vamos conversar</span>
-        <h2 style="margin-top:18px;font-size:clamp(36px,5.5vw,64px)" data-i18n-html="cta.title">
-          tem um problema técnico difícil<br/>em fintech ou healthtech?
-        </h2>
-        <p style="margin-top:24px;font-size:17px;line-height:1.55" data-i18n="cta.body">
-          Estou aberto a conversar sobre vagas, projetos pontuais e parcerias técnicas. Resposta em até 48h.
-        </p>
-        <div class="hero-ctas" style="justify-content:center;margin-top:36px">
-          <a class="btn btn-accent" href="mailto:edson.cesar.alencar@gmail.com">
-            edson.cesar.alencar@gmail.com
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-          <a class="btn" href="https://wa.me/5584999398021?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.05-.4 0-.5-.05-.15-.7-1.7-1-2.3-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.05 1-1.05 2.5s1.1 3 1.25 3.2c.15.2 2.15 3.3 5.25 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.05-1.45.25-.75.25-1.4.2-1.5-.05-.1-.25-.2-.55-.35z"/></svg>
-            +55 84 99939-8021
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-block">
-      <div class="head">// edson.alencar</div>
-      <h3 style="font-weight:500;letter-spacing:-0.02em" data-i18n="footer.tagline">Backend Developer — fintech &amp; healthtech.</h3>
-      <p style="font-size:13.5px;margin-top:16px;max-width:340px" data-i18n="footer.location">
-        Mossoró/RN — Brasil. Trabalhando remoto para SolarZ.
-        Construindo Mind Safe e estudando IA com FinCat.
-      </p>
-      <div style="margin-top:24px"><span class="badge"><span class="dot"></span><span data-i18n="footer.available">aceitando conversas · 2026</span></span></div>
-    </div>
-    <div class="footer-block">
-      <div class="head" data-i18n="footer.nav">// navegar</div>
-      <ul>
-        <li><a href="index.html" data-i18n="footer.home">→ home</a></li>
-        <li><a href="projetos.html" data-i18n="footer.projects">→ projetos</a></li>
-        <li><a href="sobre.html" data-i18n="footer.about">→ sobre</a></li>
-        <li><a href="#" data-i18n="footer.writing">→ escrita</a></li>
-      </ul>
-    </div>
-    <div class="footer-block">
-      <div class="head" data-i18n="footer.social">// social</div>
-      <ul>
-        <li><a href="https://github.com/Edsonalencar" target="_blank" rel="noopener">→ github <span class="ext">↗</span></a></li>
-        <li><a href="https://www.linkedin.com/in/edson-allencar/" target="_blank" rel="noopener">→ linkedin <span class="ext">↗</span></a></li>
-        <li><a href="https://x.com" target="_blank" rel="noopener">→ x/twitter <span class="ext">↗</span></a></li>
-      </ul>
-    </div>
-    <div class="footer-block">
-      <div class="head" data-i18n="footer.contact">// contato direto</div>
-      <ul>
-        <li><a href="mailto:edson.cesar.alencar@gmail.com" data-i18n="footer.email">→ e-mail</a></li>
-        <li><a href="https://wa.me/5584999398021?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." data-i18n="footer.wpp">→ whatsapp</a></li>
-        <li><a href="assets/curriculo.pdf" download="Curriculo Edson Alencar - Backend Pleno" data-i18n="footer.cv">→ currículo.pdf</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <div data-i18n="footer.copy">© 2026 edson alencar · construído com html, css e café.</div>
-    <div><span data-i18n="footer.deploy">last deploy:</span> <span style="color:var(--accent)">●</span> 15.may.2026</div>
-  </div>
-</footer>
-
-<script src="i18n.js"></script>
-<script src="shared.js"></script>
-</body>
+    <script src="i18n.js"></script>
+    <script src="shared.js"></script>
+  </body>
 </html>
